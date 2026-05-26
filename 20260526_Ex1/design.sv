@@ -1,14 +1,19 @@
-module fulladd(A, B, Ci, S, Co);
-  input A, B, Ci;
-  output S, Co;
+module block (D,Clk,X,Y) ;
+    input D,Clk;
+    output reg [3:0] X,Y;
+    integer i;
 
-  wire AB, ACi, BCi, xorAB;
+    always@ (posedge Clk) begin
+        for(i=3;i>0;i=i-1) begin 
+            X[i] = X[i-1];
+        end
 
-  and(AB, A, B);
-  and(ACi, A, Ci);
-  and(BCi, B, Ci);
-  or(Co, AB, ACi, BCi);
+        
+        for (i = 1; i<=3; i=i+1) begin
+            Y[i] <= Y[i-1];
+        end
 
-  xor(xorAB, A, B);
-  xor(S, xorAB, Ci);
+        X[0] = D ;
+        Y[0] <= D;
+    end
 endmodule

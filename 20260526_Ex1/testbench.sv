@@ -1,69 +1,47 @@
 `timescale 1ns/1ns
-module fulladd_test();
-  // constants
-  
-  // general purpose registers
-  reg A,B, Ci;
-   
-  // wires
-  wire SOut;
-  wire CoOut;
+module Test();
 
+    reg clk,D;
+    wire [3:0] Q1,Q2;
 
-  fulladd uut(
-    .A(A),
-    .B(B),
-    .Ci(Ci),
-    .Co(CoOut),
-    .S(SOut)
-  );
+    block uut(
+        .D(D),.Clk(clk),.X(Q1),.Y(Q2)
+    );
 
-  initial    
-  begin
-    A=1'b0; //A=0
-    B=1'b0; //B=0
-	Ci=1'b0; //Ci=0
-    #20;
-    A=1'b0;
-    B=1'b0;
-	Ci=1'b1;
-    #20;
-    A=1'b0;
-    B=1'b1; 
-	Ci=1'b0;
-    #20;
-    A=1'b0; 
-    B=1'b1;
-	Ci=1'b1;
-    #20;
-    A=1'b1;
-    B=1'b0;
-	Ci=1'b0;
-    #20;
-    A=1'b1; 
-    B=1'b0; 
-	Ci=1'b1;
-    #20;
-    A=1'b1; 
-    B=1'b1;
-	Ci=1'b0;
-    #20;
-    A=1'b1;
-    B=1'b1;
-    Ci=1'b1;
-    #20;
-  end 
-      
-  initial 
-  begin
-    $display("Starting Testbench...");
-    #180;
-    $finish();
-  end
+    initial begin
+        forever begin
+            clk = !clk;
+            #100;
+        end
+    end
 
-  initial 
-  begin
-    $dumpfile("dump.vcd");
-    $dumpvars(0);
-  end
+    initial begin
+        clk = 1'b0;D = 1'b0;
+        #100;
+        D = !D;
+        #200;
+        D = !D;
+        #200;
+        D = !D;
+        #200;
+        D = !D;
+        #200;
+        D = !D;
+        #400;
+        D = !D;
+        #400;
+        D = !D;
+        #400;
+    end
+    initial begin
+        $display("Starting Testbench");
+        #2200;
+        $finish;
+    end
+
+    initial begin
+        $dumpfile("dump.vcd");
+        $dumpvars(0);
+    end
+
 endmodule
