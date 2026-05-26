@@ -1,19 +1,44 @@
-module block (D,Clk,X,Y) ;
-    input D,Clk;
-    output reg [3:0] X,Y;
-    integer i;
-
-    always@ (posedge Clk) begin
-        for(i=3;i>0;i=i-1) begin 
-            X[i] = X[i-1];
-        end
-
-        
-        for (i = 1; i<=3; i=i+1) begin
-            Y[i] <= Y[i-1];
-        end
-
-        X[0] = D ;
-        Y[0] <= D;
+module Max (
+    input[3:0] A,input[3:0] B,input[3:0] C,output reg [3:0] X
+);
+    
+    always @(*) begin
+    if (A>=B && A>=C)
+        assign X = A;
+    else if (B>=A && B>=C)
+        assign X = B;
+    else 
+        assign X = C;
     end
+
+endmodule
+
+module Min (
+    input[3:0] A,input[3:0] B,input[3:0] C,output reg [3:0] X
+);
+    
+    always @(*) begin
+    if (A<=B && A<=C)
+        assign X = A;
+    else if (B<=A && B<=C)
+        assign X = B;
+    else 
+        assign X = C;
+    end
+
+endmodule
+
+module Mid (
+    input[3:0] A,input[3:0] B,input[3:0] C,output reg [3:0] X
+);
+    
+    always @(*) begin
+    if ((A<=B && A>=C) || (A>=B && A<=C) )
+        assign X = A;
+    else if ((B>=A && B<=C) || (B<=A && B>=C))
+        assign X = B;
+    else 
+        assign X = C;
+    end
+
 endmodule

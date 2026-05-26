@@ -1,41 +1,37 @@
 `timescale 1ns/1ns
-module Test();
+module Practice();
 
-    reg clk,D;
-    wire [3:0] Q1,Q2;
+    reg[3:0] A,B,C;
+    wire[3:0] X;
+    wire[3:0] Y;
+    wire[3:0] Z;
 
-    block uut(
-        .D(D),.Clk(clk),.X(Q1),.Y(Q2)
-    );
+    // Max uut(
+    //     .A(A),.B(B),.C(C),.X(X)
+    // );
+    // Min uut(
+    //     .A(A),.B(B),.C(C),.X(Y)
+    // );
+    // Mid uut(
+    //     .A(A),.B(B),.C(C),.X(Z)
+    // );
+
+    Max max_inst(.A(A), .B(B), .C(C), .X(X));
+    Min min_inst(.A(A), .B(B), .C(C), .X(Y));
+    Mid mid_inst(.A(A), .B(B), .C(C), .X(Z));
+
 
     initial begin
-        forever begin
-            clk = !clk;
-            #100;
-        end
-    end
-
-    initial begin
-        clk = 1'b0;D = 1'b0;
         #100;
-        D = !D;
-        #200;
-        D = !D;
-        #200;
-        D = !D;
-        #200;
-        D = !D;
-        #200;
-        D = !D;
-        #400;
-        D = !D;
-        #400;
-        D = !D;
-        #400;
+        A = 4'b1111;B = 4'b1010;C = 4'b0000;
+        #100;
+        A = 4'b1011;B = 4'b1000;C = 4'b0001;
+        #100;
+        A = 4'b1010;C = 4'b1010;
     end
     initial begin
         $display("Starting Testbench");
-        #2200;
+        #600;
         $finish;
     end
 
