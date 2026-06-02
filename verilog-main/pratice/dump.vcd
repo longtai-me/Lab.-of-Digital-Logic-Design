@@ -1,0 +1,99 @@
+$date
+	Sat May 13 20:09:16 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module Practice $end
+$var wire 4 ! Z [3:0] $end
+$var wire 4 " Y [3:0] $end
+$var wire 4 # X [3:0] $end
+$var reg 4 $ A [3:0] $end
+$var reg 4 % B [3:0] $end
+$var reg 4 & C [3:0] $end
+$scope module max_inst $end
+$var wire 4 ' A [3:0] $end
+$var wire 4 ( B [3:0] $end
+$var wire 4 ) C [3:0] $end
+$var reg 4 * X [3:0] $end
+$upscope $end
+$scope module mid_inst $end
+$var wire 4 + A [3:0] $end
+$var wire 4 , B [3:0] $end
+$var wire 4 - C [3:0] $end
+$var reg 4 . X [3:0] $end
+$upscope $end
+$scope module min_inst $end
+$var wire 4 / A [3:0] $end
+$var wire 4 0 B [3:0] $end
+$var wire 4 1 C [3:0] $end
+$var reg 4 2 X [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11 2
+b100 1
+b101 0
+b11 /
+b100 .
+b100 -
+b101 ,
+b11 +
+b101 *
+b100 )
+b101 (
+b11 '
+b100 &
+b101 %
+b11 $
+b101 #
+b11 "
+b100 !
+$end
+#200
+b10 !
+b10 .
+b11 &
+b11 )
+b11 -
+b11 1
+b11 #
+b11 *
+b10 %
+b10 (
+b10 ,
+b10 0
+b1 "
+b1 2
+b1 $
+b1 '
+b1 +
+b1 /
+#400
+b111 #
+b111 *
+b101 &
+b101 )
+b101 -
+b101 1
+b110 !
+b110 .
+b110 %
+b110 (
+b110 ,
+b110 0
+b101 "
+b101 2
+b111 $
+b111 '
+b111 +
+b111 /
+#600

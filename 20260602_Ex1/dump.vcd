@@ -1,0 +1,127 @@
+$date
+	Tue Jun  2 10:27:50 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module Practice $end
+$var wire 4 ! square_if [3:0] $end
+$var wire 4 " square_gate [3:0] $end
+$var wire 4 # square_case [3:0] $end
+$var wire 4 $ square_assign [3:0] $end
+$var reg 1 % I0 $end
+$var reg 1 & I1 $end
+$scope module square_a $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var wire 1 ' O0 $end
+$var wire 1 ( O1 $end
+$var wire 1 ) O2 $end
+$var wire 1 * O3 $end
+$upscope $end
+$scope module square_c $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var reg 1 + O0 $end
+$var reg 1 , O1 $end
+$var reg 1 - O2 $end
+$var reg 1 . O3 $end
+$upscope $end
+$scope module square_g $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var wire 1 / O0 $end
+$var wire 1 0 O1 $end
+$var wire 1 1 O2 $end
+$var wire 1 2 O3 $end
+$var wire 1 3 nI0 $end
+$upscope $end
+$scope module square_i $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var reg 1 4 O0 $end
+$var reg 1 5 O1 $end
+$var reg 1 6 O2 $end
+$var reg 1 7 O3 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+07
+06
+05
+04
+13
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#100
+b1 !
+b1 #
+b1 "
+b1 $
+14
+1+
+03
+1/
+1'
+1%
+#200
+1)
+11
+b100 "
+b100 #
+b100 !
+b100 $
+13
+0/
+1-
+0+
+16
+04
+0'
+0%
+1&
+#300
+0)
+b1001 !
+b1001 #
+01
+b1001 "
+1*
+b1001 $
+17
+06
+14
+1.
+0-
+1+
+03
+12
+1/
+1'
+1%
+#450

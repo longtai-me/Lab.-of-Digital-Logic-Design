@@ -1,37 +1,52 @@
 `timescale 1ns/1ns
+
 module Practice();
+    reg Clk, D;
+    wire [3:0] Q1;
+    wire [3:0] Q2;
 
-    reg[3:0] A,B,C;
-    wire[3:0] X;
-    wire[3:0] Y;
-    wire[3:0] Z;
+    BlockingShiftRegister q1_inst(
+        .Clk(Clk),
+        .D(D),
+        .Q1(Q1)
+    );
 
-    // Max uut(
-    //     .A(A),.B(B),.C(C),.X(X)
-    // );
-    // Min uut(
-    //     .A(A),.B(B),.C(C),.X(Y)
-    // );
-    // Mid uut(
-    //     .A(A),.B(B),.C(C),.X(Z)
-    // );
-
-    Max max_inst(.A(A), .B(B), .C(C), .X(X));
-    Min min_inst(.A(A), .B(B), .C(C), .X(Y));
-    Mid mid_inst(.A(A), .B(B), .C(C), .X(Z));
-
+    NonBlockingShiftRegister q2_inst(
+        .Clk(Clk),
+        .D(D),
+        .Q2(Q2)
+    );
 
     initial begin
-        #100;
-        A = 4'b1111;B = 4'b1010;C = 4'b0000;
-        #100;
-        A = 4'b1011;B = 4'b1000;C = 4'b0001;
-        #100;
-        A = 4'b1010;C = 4'b1010;
+        Clk = 1'b0;
+        forever begin
+            #100;
+            Clk = !Clk;
+        end
     end
+
+    initial begin
+        D = 1'b0;
+        #100;
+        D = 1'b1;
+        #200;
+        D = 1'b0;
+        #200;
+        D = 1'b1;
+        #200;
+        D = 1'b0;
+        #200;
+        D = 1'b1;
+        #400;
+        D = 1'b0;
+        #400;
+        D = 1'b1;
+        #400;
+    end
+
     initial begin
         $display("Starting Testbench");
-        #600;
+        #2200;
         $finish;
     end
 
@@ -39,5 +54,4 @@ module Practice();
         $dumpfile("dump.vcd");
         $dumpvars(0);
     end
-
 endmodule

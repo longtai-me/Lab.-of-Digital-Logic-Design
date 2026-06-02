@@ -8,81 +8,102 @@
 :vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
 :vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
 :vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2009.vpi";
-S_0x1030cabe0 .scope package, "$unit" "$unit" 2 1;
+S_0x100c124c0 .scope package, "$unit" "$unit" 2 1;
  .timescale 0 0;
-S_0x1030cad60 .scope module, "ABSY_test" "ABSY_test" 3 2;
+S_0x100c10a60 .scope module, "ABSY_test" "ABSY_test" 3 2;
  .timescale -9 -9;
-v0x1030d3d30_0 .var "A", 0 0;
-v0x1030d3dd0_0 .var "B", 0 0;
-v0x1030d3e70_0 .var "S", 0 0;
-v0x1030d3f10_0 .net "Yout", 0 0, L_0x1030d4100;  1 drivers
-S_0x1030d3890 .scope module, "uut" "ABSY" 3 11, 4 1 0, S_0x1030cad60;
+v0x100c17fe0_0 .var "A", 0 0;
+v0x100c18080_0 .var "B", 0 0;
+v0x100c18120_0 .var "S", 0 0;
+v0x100c181c0_0 .net "Yout", 0 0, L_0x87f0343f0;  1 drivers
+S_0x100c10be0 .scope module, "uut" "ABSY" 3 11, 4 1 0, S_0x100c10a60;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "A";
     .port_info 1 /INPUT 1 "B";
     .port_info 2 /INPUT 1 "S";
     .port_info 3 /OUTPUT 1 "Y";
-L_0x1030d3fb0 .functor NOT 1, v0x1030d3e70_0, C4<0>, C4<0>, C4<0>;
-L_0x1030d4020 .functor AND 1, L_0x1030d3fb0, v0x1030d3d30_0, C4<1>, C4<1>;
-L_0x1030d4090 .functor AND 1, L_0x1030d3fb0, v0x1030d3dd0_0, C4<1>, C4<1>;
-L_0x1030d4100 .functor OR 1, L_0x1030d4020, L_0x1030d4090, C4<0>, C4<0>;
-v0x1030cd760_0 .net "A", 0 0, v0x1030d3d30_0;  1 drivers
-v0x1030cd800_0 .net "B", 0 0, v0x1030d3dd0_0;  1 drivers
-v0x1030d3a10_0 .net "S", 0 0, v0x1030d3e70_0;  1 drivers
-v0x1030d3ab0_0 .net "SB", 0 0, L_0x1030d4090;  1 drivers
-v0x1030d3b50_0 .net "Y", 0 0, L_0x1030d4100;  alias, 1 drivers
-v0x1030d3bf0_0 .net "notS", 0 0, L_0x1030d3fb0;  1 drivers
-v0x1030d3c90_0 .net "notSA", 0 0, L_0x1030d4020;  1 drivers
-    .scope S_0x1030cad60;
+L_0x87f0342a0 .functor NOT 1, v0x100c18120_0, C4<0>, C4<0>, C4<0>;
+L_0x87f034310 .functor AND 1, L_0x87f0342a0, v0x100c17fe0_0, C4<1>, C4<1>;
+L_0x87f034380 .functor AND 1, v0x100c18120_0, v0x100c18080_0, C4<1>, C4<1>;
+L_0x87f0343f0 .functor OR 1, L_0x87f034310, L_0x87f034380, C4<0>, C4<0>;
+v0x100c17b80_0 .net "A", 0 0, v0x100c17fe0_0;  1 drivers
+v0x100c17c20_0 .net "B", 0 0, v0x100c18080_0;  1 drivers
+v0x100c17cc0_0 .net "S", 0 0, v0x100c18120_0;  1 drivers
+v0x100c17d60_0 .net "SB", 0 0, L_0x87f034380;  1 drivers
+v0x100c17e00_0 .net "Y", 0 0, L_0x87f0343f0;  alias, 1 drivers
+v0x100c17ea0_0 .net "notS", 0 0, L_0x87f0342a0;  1 drivers
+v0x100c17f40_0 .net "notSA", 0 0, L_0x87f034310;  1 drivers
+    .scope S_0x100c10a60;
 T_0 ;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1030d3d30_0, 0, 1;
+    %store/vec4 v0x100c17fe0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1030d3dd0_0, 0, 1;
+    %store/vec4 v0x100c18080_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1030d3e70_0, 0, 1;
-    %delay 160, 0;
+    %store/vec4 v0x100c18120_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c17fe0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1030d3d30_0, 0, 1;
+    %store/vec4 v0x100c18080_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1030d3dd0_0, 0, 1;
-    %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1030d3e70_0, 0, 1;
-    %delay 80, 0;
+    %store/vec4 v0x100c18120_0, 0, 1;
+    %delay 20, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1030d3d30_0, 0, 1;
+    %store/vec4 v0x100c17fe0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1030d3dd0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1030d3e70_0, 0, 1;
-    %delay 240, 0;
+    %store/vec4 v0x100c18080_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1030d3d30_0, 0, 1;
+    %store/vec4 v0x100c18120_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c17fe0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c18080_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1030d3dd0_0, 0, 1;
-    %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1030d3e70_0, 0, 1;
-    %delay 160, 0;
+    %store/vec4 v0x100c18120_0, 0, 1;
+    %delay 20, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x1030d3d30_0, 0, 1;
+    %store/vec4 v0x100c17fe0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c18080_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1030d3dd0_0, 0, 1;
+    %store/vec4 v0x100c18120_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c17fe0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x1030d3e70_0, 0, 1;
-    %delay 160, 0;
+    %store/vec4 v0x100c18080_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c18120_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c17fe0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c18080_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c18120_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c17fe0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c18080_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c18120_0, 0, 1;
+    %delay 20, 0;
     %end;
     .thread T_0;
-    .scope S_0x1030cad60;
+    .scope S_0x100c10a60;
 T_1 ;
-    %vpi_call/w 3 44 "$display", "Starting Testbench..." {0 0 0};
-    %delay 880, 0;
-    %vpi_call/w 3 46 "$finish" {0 0 0};
+    %vpi_call/w 3 40 "$display", "Starting Testbench..." {0 0 0};
+    %delay 180, 0;
+    %vpi_call/w 3 42 "$finish" {0 0 0};
     %end;
     .thread T_1;
-    .scope S_0x1030cad60;
+    .scope S_0x100c10a60;
 T_2 ;
-    %vpi_call/w 3 51 "$dumpfile", "dump.vcd" {0 0 0};
-    %vpi_call/w 3 52 "$dumpvars", 32'sb00000000000000000000000000000000 {0 0 0};
+    %vpi_call/w 3 47 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call/w 3 48 "$dumpvars", 32'sb00000000000000000000000000000000 {0 0 0};
     %end;
     .thread T_2;
 # The file index is used to find the file name in the following table.

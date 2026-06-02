@@ -30,14 +30,13 @@ module tb_value_sorter;
         // c.
         #20 A = 4'b1100; B = 4'b0010; C = 4'b0001;
         
-        // 結束模擬
-        #20 $finish;
+        #20;
     end
       
   initial 
   begin
     $display("Starting Testbench...");
-    #880;
+    #100;
     $finish();
   end
 

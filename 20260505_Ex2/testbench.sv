@@ -17,32 +17,28 @@ module ABSY_test();
 
   initial    
   begin
-    A=1'b0;
-    B=1'b0;
-	  S=1'b0;
-    #160;
-    A=1'b1;
-    B=1'b0;
-	  S=1'b0;
-    #80;
-    A=1'b1;
-    B=1'b0;
-	  S=1'b1;
-    #240;
-    A=1'b0;
-    B=1'b0;
-	  S=1'b1;
-    #160;
-    A=1'b0;
-    B=1'b1;
-	  S=1'b1;
-    #160;
+    A=1'b0; B=1'b0; S=1'b0;
+    #20;
+    A=1'b0; B=1'b1; S=1'b0;
+    #20;
+    A=1'b1; B=1'b0; S=1'b0;
+    #20;
+    A=1'b1; B=1'b1; S=1'b0;
+    #20;
+    A=1'b0; B=1'b0; S=1'b1;
+    #20;
+    A=1'b0; B=1'b1; S=1'b1;
+    #20;
+    A=1'b1; B=1'b0; S=1'b1;
+    #20;
+    A=1'b1; B=1'b1; S=1'b1;
+    #20;
   end 
       
   initial 
   begin
     $display("Starting Testbench...");
-    #880;
+    #180;
     $finish();
   end
 

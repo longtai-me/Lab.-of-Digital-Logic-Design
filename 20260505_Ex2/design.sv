@@ -6,7 +6,7 @@ module ABSY(A, B, S, Y);
 
   not(notS, S);
   and(notSA, notS, A);
-  and(SB, notS, B);
+  and(SB, S, B);
   or(Y, notSA, SB);
 
 endmodule

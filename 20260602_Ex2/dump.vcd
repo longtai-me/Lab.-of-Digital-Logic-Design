@@ -1,0 +1,176 @@
+$date
+	Tue Jun  2 10:27:50 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module Practice $end
+$var wire 3 ! add3_if [2:0] $end
+$var wire 3 " add3_gate [2:0] $end
+$var wire 3 # add3_case [2:0] $end
+$var wire 3 $ add3_assign [2:0] $end
+$var reg 1 % I0 $end
+$var reg 1 & I1 $end
+$var reg 1 ' I2 $end
+$scope module add3_a $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var wire 1 ' I2 $end
+$var wire 3 ( O [2:0] $end
+$upscope $end
+$scope module add3_c $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var wire 1 ' I2 $end
+$var reg 3 ) O [2:0] $end
+$upscope $end
+$scope module add3_g $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var wire 1 ' I2 $end
+$var wire 1 * nI0 $end
+$var wire 1 + nI1 $end
+$var wire 1 , nI2 $end
+$var wire 1 - o1_a $end
+$var wire 1 . o1_b $end
+$var wire 1 / o2_a $end
+$var wire 1 0 o2_b $end
+$var wire 1 1 o2_c $end
+$var wire 3 2 O [2:0] $end
+$upscope $end
+$scope module add3_i $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var wire 1 ' I2 $end
+$var reg 3 3 O [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11 3
+b11 2
+01
+00
+0/
+0.
+1-
+1,
+1+
+1*
+b11 )
+b11 (
+0'
+0&
+0%
+b11 $
+b11 #
+b11 "
+b11 !
+$end
+#100
+0-
+b100 "
+b100 2
+b100 $
+b100 (
+b100 !
+b100 3
+b100 #
+b100 )
+0*
+11
+1%
+#200
+b101 "
+b101 2
+1*
+01
+b101 $
+b101 (
+b101 #
+b101 )
+b101 !
+b101 3
+0+
+10
+0%
+1&
+#300
+b110 "
+b110 2
+b110 $
+b110 (
+b110 !
+b110 3
+b110 #
+b110 )
+0*
+1.
+11
+1%
+#400
+b111 "
+b111 2
+1-
+1/
+1*
+01
+1+
+0.
+00
+b111 $
+b111 (
+b111 #
+b111 )
+b111 !
+b111 3
+0,
+0%
+0&
+1'
+#500
+0-
+0/
+b0 "
+b0 2
+b0 $
+b0 (
+b0 !
+b0 3
+b0 #
+b0 )
+0*
+1%
+#600
+b1 "
+b1 2
+1*
+b1 $
+b1 (
+b1 #
+b1 )
+b1 !
+b1 3
+0+
+0%
+1&
+#700
+b10 "
+b10 2
+b10 $
+b10 (
+b10 !
+b10 3
+b10 #
+b10 )
+0*
+1.
+1%
+#850

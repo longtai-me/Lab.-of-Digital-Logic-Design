@@ -1,44 +1,25 @@
-module Max (
-    input[3:0] A,input[3:0] B,input[3:0] C,output reg [3:0] X
-);
-    
-    always @(*) begin
-    if (A>=B && A>=C)
-        assign X = A;
-    else if (B>=A && B>=C)
-        assign X = B;
-    else 
-        assign X = C;
-    end
+module BlockingShiftRegister(Clk, D, Q1);
+    input Clk, D;
+    output reg [3:0] Q1;
+    integer i;
 
+    always @(posedge Clk) begin
+        for (i = 3; i > 0; i = i - 1) begin
+            Q1[i] = Q1[i - 1];
+        end
+        Q1[0] = D;
+    end
 endmodule
 
-module Min (
-    input[3:0] A,input[3:0] B,input[3:0] C,output reg [3:0] X
-);
-    
-    always @(*) begin
-    if (A<=B && A<=C)
-        assign X = A;
-    else if (B<=A && B<=C)
-        assign X = B;
-    else 
-        assign X = C;
+module NonBlockingShiftRegister(Clk, D, Q2);
+    input Clk, D;
+    output reg [3:0] Q2;
+    integer i;
+
+    always @(posedge Clk) begin
+        for (i = 1; i <= 3; i = i + 1) begin
+            Q2[i] <= Q2[i - 1];
+        end
+        Q2[0] <= D;
     end
-
-endmodule
-
-module Mid (
-    input[3:0] A,input[3:0] B,input[3:0] C,output reg [3:0] X
-);
-    
-    always @(*) begin
-    if ((A<=B && A>=C) || (A>=B && A<=C) )
-        assign X = A;
-    else if ((B>=A && B<=C) || (B<=A && B>=C))
-        assign X = B;
-    else 
-        assign X = C;
-    end
-
 endmodule

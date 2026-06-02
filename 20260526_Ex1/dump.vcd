@@ -1,5 +1,5 @@
 $date
-	Tue May 26 11:31:43 2026
+	Tue Jun  2 10:27:50 2026
 $end
 $version
 	Icarus Verilog
@@ -8,29 +8,21 @@ $timescale
 	1ns
 $end
 $scope module Practice $end
-$var wire 4 ! Z [3:0] $end
-$var wire 4 " Y [3:0] $end
-$var wire 4 # X [3:0] $end
-$var reg 4 $ A [3:0] $end
-$var reg 4 % B [3:0] $end
-$var reg 4 & C [3:0] $end
-$scope module max_inst $end
-$var wire 4 ' A [3:0] $end
-$var wire 4 ( B [3:0] $end
-$var wire 4 ) C [3:0] $end
-$var reg 4 * X [3:0] $end
+$var wire 4 ! Q2 [3:0] $end
+$var wire 4 " Q1 [3:0] $end
+$var reg 1 # Clk $end
+$var reg 1 $ D $end
+$scope module q1_inst $end
+$var wire 1 # Clk $end
+$var wire 1 $ D $end
+$var reg 4 % Q1 [3:0] $end
+$var integer 32 & i [31:0] $end
 $upscope $end
-$scope module mid_inst $end
-$var wire 4 + A [3:0] $end
-$var wire 4 , B [3:0] $end
-$var wire 4 - C [3:0] $end
-$var reg 4 . X [3:0] $end
-$upscope $end
-$scope module min_inst $end
-$var wire 4 / A [3:0] $end
-$var wire 4 0 B [3:0] $end
-$var wire 4 1 C [3:0] $end
-$var reg 4 2 X [3:0] $end
+$scope module q2_inst $end
+$var wire 1 # Clk $end
+$var wire 1 $ D $end
+$var reg 4 ' Q2 [3:0] $end
+$var integer 32 ( i [31:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -39,76 +31,129 @@ $dumpall
 $end
 #0
 $dumpvars
-bx 2
-bx 1
-bx 0
-bx /
-bx .
-bx -
-bx ,
-bx +
-bx *
-bx )
 bx (
 bx '
 bx &
 bx %
-bx $
-bx #
+0$
+0#
 bx "
 bx !
 $end
 #100
-b1010 !
-b1010 .
-b0 "
-b0 2
-b1111 #
-b1111 *
+bx1 !
+bx1 '
+bx1 "
+bx1 %
 b0 &
-b0 )
-b0 -
-b0 1
-b1010 %
-b1010 (
-b1010 ,
-b1010 0
-b1111 $
-b1111 '
-b1111 +
-b1111 /
+b100 (
+1$
+1#
 #200
-b1 "
-b1 2
-b1 &
-b1 )
-b1 -
-b1 1
-b1000 !
-b1000 .
-b1000 %
-b1000 (
-b1000 ,
-b1000 0
-b1011 #
-b1011 *
-b1011 $
-b1011 '
-b1011 +
-b1011 /
+0#
 #300
-b1010 !
-b1010 .
-b1000 "
-b1000 2
-b1010 &
-b1010 )
-b1010 -
-b1010 1
-b1010 #
-b1010 *
-b1010 $
-b1010 '
-b1010 +
-b1010 /
+bx10 !
+bx10 '
+b100 (
+bx10 "
+bx10 %
+b0 &
+1#
+0$
+#400
+0#
+#500
+bx101 !
+bx101 '
+bx101 "
+bx101 %
+b0 &
+b100 (
+1#
+1$
 #600
+0#
+#700
+b1010 !
+b1010 '
+b100 (
+b1010 "
+b1010 %
+b0 &
+1#
+0$
+#800
+0#
+#900
+b101 !
+b101 '
+b101 "
+b101 %
+b0 &
+b100 (
+1#
+1$
+#1000
+0#
+#1100
+b1011 !
+b1011 '
+b100 (
+b1011 "
+b1011 %
+b0 &
+1#
+#1200
+0#
+#1300
+b110 !
+b110 '
+b110 "
+b110 %
+b0 &
+b100 (
+1#
+0$
+#1400
+0#
+#1500
+b1100 !
+b1100 '
+b100 (
+b1100 "
+b1100 %
+b0 &
+1#
+#1600
+0#
+#1700
+b1001 !
+b1001 '
+b1001 "
+b1001 %
+b0 &
+b100 (
+1#
+1$
+#1800
+0#
+#1900
+b11 !
+b11 '
+b100 (
+b11 "
+b11 %
+b0 &
+1#
+#2000
+0#
+#2100
+b111 !
+b111 '
+b111 "
+b111 %
+b0 &
+b100 (
+1#
+#2200
+0#
