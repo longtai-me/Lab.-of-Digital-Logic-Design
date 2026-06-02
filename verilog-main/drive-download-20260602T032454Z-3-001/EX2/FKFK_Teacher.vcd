@@ -1,0 +1,167 @@
+$date
+	Tue May 12 23:21:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module FKFK_TB $end
+$var wire 1 ! Z $end
+$var wire 1 " Y $end
+$var wire 5 # X [0:4] $end
+$var wire 6 $ W [0:5] $end
+$var wire 5 % V [0:4] $end
+$var wire 5 & U [0:4] $end
+$var wire 6 ' T [0:5] $end
+$var wire 5 ( S [0:4] $end
+$var wire 7 ) R [0:6] $end
+$var reg 5 * P [0:4] $end
+$var reg 5 + Q [0:4] $end
+$scope module uut $end
+$var wire 5 , P [0:4] $end
+$var wire 5 - Q [0:4] $end
+$var wire 5 . U [0:4] $end
+$var wire 10 / combined_PQ [0:9] $end
+$var wire 1 ! Z $end
+$var wire 1 " Y $end
+$var wire 5 0 X [0:4] $end
+$var wire 6 1 W [0:5] $end
+$var wire 5 2 V [0:4] $end
+$var wire 6 3 T [0:5] $end
+$var wire 5 4 S [0:4] $end
+$var wire 7 5 R [0:6] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 5
+b0 4
+b111 3
+b0 2
+b0 1
+b0 0
+b0 /
+b11111 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b111 '
+b11111 &
+b0 %
+b0 $
+b0 #
+0"
+0!
+$end
+#20
+b1 (
+b1 4
+b11 #
+b11 0
+b1 %
+b1 2
+b100000 $
+b100000 1
+b11 +
+b11 -
+b1100 )
+b1100 5
+b1011 '
+b1011 3
+b10000011 /
+1!
+b100 *
+b100 ,
+#40
+b11101 &
+b11101 .
+b10 #
+b10 0
+b11000 %
+b11000 2
+b11000 $
+b11000 1
+b10 +
+b10 -
+b1001 )
+b1001 5
+b1010 '
+b1010 3
+b1100010 /
+0!
+b11 *
+b11 ,
+#60
+1"
+b11110 &
+b11110 .
+b101 (
+b101 4
+b1011 #
+b1011 0
+b1000 %
+b1000 2
+b1010 $
+b1010 1
+b1011 +
+b1011 -
+b11 )
+b11 5
+b1000 '
+b1000 3
+b101011 /
+1!
+b1 *
+b1 ,
+#80
+0"
+b11111 &
+b11111 .
+b100 (
+b100 4
+b1001 #
+b1001 0
+b10001 %
+b10001 2
+b110010 $
+b110010 1
+b1001 +
+b1001 -
+b10010 )
+b10010 5
+b1101 '
+b1101 3
+b11001001 /
+0!
+b110 *
+b110 ,
+#100
+b11011 &
+b11011 .
+b11 (
+b11 4
+b110 #
+b110 0
+b1001 %
+b1001 2
+b101001 $
+b101001 1
+b110 +
+b110 -
+b1111 )
+b1111 5
+b1100 '
+b1100 3
+b10100110 /
+b101 *
+b101 ,
+#150

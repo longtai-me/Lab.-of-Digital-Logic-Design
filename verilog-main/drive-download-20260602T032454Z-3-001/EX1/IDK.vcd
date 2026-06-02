@@ -1,0 +1,84 @@
+$date
+	Tue May 12 11:39:12 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module IDK_TB $end
+$var wire 4 ! min [0:3] $end
+$var wire 4 " mid [0:3] $end
+$var wire 4 # max [0:3] $end
+$var reg 4 $ A [0:3] $end
+$var reg 4 % B [0:3] $end
+$var reg 4 & C [0:3] $end
+$scope module uut $end
+$var wire 4 ' A [0:3] $end
+$var wire 4 ( B [0:3] $end
+$var wire 4 ) C [0:3] $end
+$var wire 4 * min [0:3] $end
+$var wire 4 + mid [0:3] $end
+$var wire 4 , max [0:3] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#20
+b100 #
+b100 ,
+b1 !
+b1 *
+b100 &
+b100 )
+b10 %
+b10 (
+b10 "
+b10 +
+b1 $
+b1 '
+#40
+b1000 #
+b1000 ,
+b10 !
+b10 *
+b10 &
+b10 )
+b100 %
+b100 (
+b100 "
+b100 +
+b1000 $
+b1000 '
+#60
+b1 !
+b1 *
+b1100 #
+b1100 ,
+b1 &
+b1 )
+b10 %
+b10 (
+b10 "
+b10 +
+b1100 $
+b1100 '
+#100

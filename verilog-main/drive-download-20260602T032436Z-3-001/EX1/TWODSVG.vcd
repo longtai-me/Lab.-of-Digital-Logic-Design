@@ -1,0 +1,101 @@
+$date
+	Tue May 26 11:53:44 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module TWODSVG_TB $end
+$var wire 1 ! t_O0 $end
+$var wire 1 " t_O1 $end
+$var wire 1 # t_O2 $end
+$var wire 1 $ t_O3 $end
+$var reg 1 % t_I0 $end
+$var reg 1 & t_I1 $end
+$scope module uut1 $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var wire 1 ' NI0 $end
+$var wire 1 ! O0 $end
+$var wire 1 " O1 $end
+$var wire 1 # O2 $end
+$var wire 1 $ O3 $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var wire 1 ! O0 $end
+$var wire 1 " O1 $end
+$var wire 1 # O2 $end
+$var wire 1 $ O3 $end
+$upscope $end
+$scope module uut3 $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var reg 1 ( O0 $end
+$var reg 1 ) O1 $end
+$var reg 1 * O2 $end
+$var reg 1 + O3 $end
+$upscope $end
+$scope module uut4 $end
+$var wire 1 % I0 $end
+$var wire 1 & I1 $end
+$var reg 1 , O0 $end
+$var reg 1 - O1 $end
+$var reg 1 . O2 $end
+$var reg 1 / O3 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+1'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10000
+0'
+1(
+1,
+1!
+1%
+#20000
+1'
+1*
+0(
+1#
+1.
+0,
+0!
+0%
+1&
+#30000
+0'
+1+
+1(
+0*
+1$
+1/
+0#
+0.
+1,
+1!
+1%
+#40000

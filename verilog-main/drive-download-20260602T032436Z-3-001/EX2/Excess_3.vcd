@@ -1,0 +1,97 @@
+$date
+	Thu May 28 15:15:29 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module Excess_3_tb $end
+$var wire 1 ! t_O2_if $end
+$var wire 1 " t_O2_df $end
+$var wire 1 # t_O1_if $end
+$var wire 1 $ t_O1_df $end
+$var wire 1 % t_O0_if $end
+$var wire 1 & t_O0_df $end
+$var reg 1 ' t_I0 $end
+$var reg 1 ( t_I1 $end
+$var reg 1 ) t_I2 $end
+$scope module uut1 $end
+$var wire 1 ' I0 $end
+$var wire 1 ( I1 $end
+$var wire 1 ) I2 $end
+$var wire 1 & O0 $end
+$var wire 1 $ O1 $end
+$var wire 1 " O2 $end
+$upscope $end
+$scope module uut2 $end
+$var wire 1 ' I0 $end
+$var wire 1 ( I1 $end
+$var wire 1 ) I2 $end
+$var reg 1 % O0 $end
+$var reg 1 # O1 $end
+$var reg 1 ! O2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0)
+0(
+0'
+1&
+1%
+1$
+1#
+0"
+0!
+$end
+#10
+1"
+0$
+0&
+1!
+0#
+0%
+1'
+#20
+1&
+1%
+0'
+1(
+#30
+1$
+0&
+1#
+0%
+1'
+#40
+1&
+1%
+0'
+0(
+1)
+#50
+0"
+0$
+0&
+0!
+0#
+0%
+1'
+#60
+1&
+1%
+0'
+1(
+#70
+1$
+0&
+1#
+0%
+1'
+#80
